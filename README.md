@@ -1,22 +1,35 @@
 # Petrait
 
-> Your dog. As Napoleon.
-
 AI portraits of your pet in any style — royal, Renaissance, astronaut, wizard. Made for your wall.
 
-## What you get
+## Stack
 
-- **Dogs, cats, whatever** — Horses, parrots, bearded dragons. If you love it, we can portrait it.
-- **Forty painterly styles** — Baroque royalty. Pixar cartoon. Album cover. Pick any.
-- **Print-quality exports** — High-res files ready to frame or print. Canvas in one tap.
+- **Next.js 15** (App Router)
+- **TypeScript** (strict)
+- **Tailwind CSS v4**
+- **pnpm**
 
-## Category
+## Run locally
 
-Consumer AI. Part of a 50-product exploration of high-demand consumer and SMB markets.
+```bash
+pnpm install
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Deploy
+
+Deploy to [Vercel](https://vercel.com) — zero config required. Connect the repo and push.
+
+## Routes
+
+| Route | Description |
+|-------|-------------|
+| `/` | Landing page with waitlist signup |
+| `/try` | Upload a pet photo, apply Napoleon style (client-side), download |
+| `/api/waitlist` | `POST { email }` → forwards to waitlist API |
 
 ## Status
 
-Landing page live with interactive demo and functional waitlist.
-
-- **Live:** https://mukundakatta.github.io/petrait/
-- **Waitlist API:** https://waitlist-api-sigma.vercel.app/api/waitlist
+v0 skeleton — landing page ported from static HTML, `/try` page with mocked Napoleon style (CSS sepia + contrast + crown overlay), waitlist API wired up. AI image generation not yet integrated.
